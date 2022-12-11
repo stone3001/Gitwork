@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfoliowebsite</title>
+    <style>
+ 
+        .wrapper{
+            display: flex;
+            background-color: rgb(58, 58, 56);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper .static-txt {
+            color: #fff;
+            font-size: 70px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .wrapper .dynamictext{
+            margin-left:  15px;
+            line-height: 90px;
+            height: 90px;
+            overflow: hidden;
+        }
+        .dynamictext li {
+            list-style: none;
+            color: aqua;
+            font-size: 60px;
+            font-weight: 500;
+            top: 0;
+            position: relative;
+            animation: slide 12s steps(4) infinite;
+        }
+        @keyframes slide{
+            100%  {
+                top: -360px;
+            }
+
+        }
+        .dynamictext li{
+            position: relative;
+        }
+            .dynamictext li::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(58, 58, 56);
+            border-left: 2px solidcolor red;
+            animation: typing 3s steps(16) infinite;
+        }
+        @keyframes typing{
+            40%,
+            60% {
+                left: calc(100% + 30px);
+            }
+            100% {
+                left: 0;
+            }
+        }
+        .body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vh;
+            background: #000;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            border: none;
+        }
+
+        .container{
+            display: flex;
+            align-items: stretch;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            background-color: rgb(54, 70, 97);
+            margin: 0px;
+        }
+
+        .item{
+            flex-basis: auto;
+            width: 300px;
+            height: auto;
+            background-color: bisque;
+            color: red;
+            margin: auto;
+            text-align: center;
+        }
+        .showall{
+          
+            margin: auto;
+            width: 100%;
+            background-color: rgb(54, 70, 97);
+            color: red;
+            margin: auto;
+            align-items: center;
+            text-align: center;  
+            height: 200px;  
+            padding-top: 100px;  
+
+        }
+        .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        }
+   
+        header {
+        background-color: rgb(230, 1, 90);
+        margin: 0;
+        height: 40px;
+        position: relative;
+        border: none;
+    
+        
+        }
+        .button2 {background-color: rgb(230, 1, 90);border: none;} /* Blue */
+        .button3 {background-color: rgb(230, 1, 90);border: none;} /* Red */ 
+        .button4 {background-color: rgb(230, 1, 90);border: none;} /* Gray */ 
+        .button5 {background-color: #555555;} /* Black */
+        button:hover {
+        background-color: rgb(54, 70, 97);
+        border: none;
+        }
+
+    </style>
+</head>
+<body style="margin: 0px;">
+    <header class="header" id="myHeader">
+
+        <h2 style="background-color:rgb(230, 1, 90);margin: 0px;text-align: right;border: none;">         
+            
+            <button class="header button2">About</button>
+            <button class="header button3">Work</button>
+            <button class="header button4">Contact</button>
+        
+        </h2>
+        
+    </header>
+    <div class="wrapper">
+        <div class ="static-txt">Hi I am Rahul</div>
+        <ul class="dynamictext">
+        <li><span> Project Engineer </span></li>
+        <li><span> Adventurer </span></li>
+        <li><span> Rider </span></li>
+        <li><span> Trekker </span></li>
+    </ul>
+    </div>
+    <div><h1 style="background-color:rgb(54, 70, 97);color:white;margin: 0px;text-align: center;border: none;padding: 50px;"> <u>These are some of my projects</u></h1></div>
+    <div class="container">
+        
+        <br>
+        <div class="item 1">
+            <h3>PeriodicTable</h3> 
+           <img src="periodtable.jpg" height="200px" width="200px">
+            
+            <button>Read more</button>
+        </div>
+        <div class="item 2">
+            <h3>Animation Login Page</h3>
+            <img src="loginpage.jpg" height="200px" width="200px">
+            
+            <button>Read more</button>
+        </div>
+        <div class="item 3"><h3>Travel Blog</h3>
+            <img src="travelblog.jpg"height="200px" width="200px">
+          
+            <button>Read more</button>
+        </div>
+
+    </div>
+    <div class="showall">
+        <button>Show All</button>
+    </div>
+    <footer style="background-color:rgb(58, 58, 56);margin: 0px;text-align: center; padding: 2%;">
+
+        <h1> Lets Work Together</h1>
+<div class="showall">
+    <button class="header ">Facebook</button>
+    <button class="header ">Instagram</button>
+    <button class="header ">Linkedin</button>
+</div>
+
+      </footer>
+      <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+        }
+        </script>
+</body>
+</html>
