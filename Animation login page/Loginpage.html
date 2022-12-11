@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: 'Cambria';
+        }
+        .login{
+            width: 350px;
+            overflow: hidden;
+            margin: auto;
+            margin: 20 0 0 400px;
+            padding: 70px;
+            background: cornflowerblue;
+        }
+        h2{
+            text-align: center;
+            color: black;
+            padding: 20px;
+        }
+        #Username{
+            width: 300px;
+            height: 40px;
+            border-radius: 3px;
+            padding-left: 8px;
+        }
+        #Username:hover{
+            background-color: rgb(155, 228, 232);
+            cursor: pointer;
+        }
+        #email{
+            width: 300px;
+            height: 40px;
+            border-radius: 3px;
+            padding-left: 8px;
+        }
+        #email:hover{
+            background-color: rgb(155, 228, 232);
+            cursor: pointer;
+        }
+        #password{
+            width: 300px;
+            height: 40px;
+            border-radius: 3px;
+            padding-left: 8px;
+        }
+        #password:hover{
+            background-color: rgb(155, 228, 232);
+            cursor: pointer;
+        }
+        #submit{
+            width: 150px;
+            height: 40px;
+            border-radius: 3px;
+            padding-left: 8px;
+        }
+        #submit:hover{
+            background-color: rgb(77, 215, 77);
+            cursor: pointer;
+        }
+        p{
+            float: right;
+            color: black;
+            font-size: 18px;
+            overflow-wrap: break-word;
+            inline-size: 85px;
+            padding-left: 1000px;
+        }
+        a{
+            float: right;
+            background-color: aqua;
+        }
+        .loader {
+            border: 1px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 1px solid #3498db;
+            width: 50px;
+            height: 50px;
+            -webkit-animation: spin 2s linear infinite; 
+            animation: spin 2s linear infinite;
+            float: right;
+        }
+            @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+            @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Page</h2><br>
+    <div class="login">
+        <form>
+            <input type="text" name="Username" id="Username" placeholder="User Name">
+            <br><br>
+            <input type="Email" name="email" id="email" placeholder="Email">
+            <br><br>
+            <input type="Password" name="password" id="password" placeholder="Password">
+            <br><br>
+            <input type="Submit" name="submit" id="submit" placeholder="Submit">
+            <br>
+            <div class="loader"></div>
+            <br><br>
+            <p>Waiting for Network...</p>
+        </form>
+</body>
+</html>
